@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---Custom CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!---Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!---Funciones Javascript-->
+    <script src="/myScriptCalc.js"></script>
+    <!---Fontawesome icons-->
+    <script src="https://kit.fontawesome.com/22632f48e5.js" crossorigin="anonymous"></script>
+
+    <title>Calculadora-HTML/CSS/JS -- Tarea</title>
+</head>
+<body>
+    <div class="container" id="container">
+      <table class="table table-bordered table-dark" id="calculadora">
+        <thead>
+          <tr>
+            <th scope="col" colspan="4" id="screen"></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td id="cal-btn"><button onclick="Clear()" id="clearAll">C</button></td>
+            <th scope="row" id="cal-btnOperacion"><button onclick="add('/100')">%</button></th>
+            <td id="cal-btn"><button onclick="del()" id="backspace" class="bg-danger"><i class="fas fa-backspace"></i></button></td>
+            <th scope="row" id="cal-btnOperacion"><button onclick="add('/')">÷</button></th>
+          </tr>
+
+          <tr>
+            <td id="cal-btnNumber"><button onclick="add('7')">7</button></td>
+            <td id="cal-btnNumber"><button onclick="add('8')">8</button></td>
+            <td id="cal-btnNumber"><button onclick="add('9')">9</button></td>
+            <th scope="row" id="cal-btnOperacion"><button onclick="add('*')">x</button></th>
+          </tr>
+
+          <tr>
+            <td id="cal-btnNumber"><button onclick="add('4')">4</button></td>
+            <td id="cal-btnNumber"><button onclick="add('5')">5</button></td>
+            <td id="cal-btnNumber"><button onclick="add('6')">6</button></td>
+            <th scope="row" id="cal-btn"><button onclick="add('-')">-</button></th>
+          </tr>
+
+          <tr>
+            <td id="cal-btnNumber"><button onclick="add('1')">1</button></td>
+            <td id="cal-btnNumber"><button onclick="add('2')">2</button></td>
+            <td id="cal-btnNumber"><button onclick="add('3')">3</button></td>
+            <th scope="row" id="cal-btnOperacion"><button onclick="add('+')">+</button></th>
+          </tr>
+
+          <tr>
+            <td id="cal-btnNumber"></td>
+            <td id="cal-btnNumber"><button onclick="add('0')">0</button></td>
+            <td id="cal-btn"><button onclick="add('.')">.</button></td>
+            <th scope="row" id="cal-btnOperacion"><button onclick="calc()" class="bg-primary">=</button></th>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+</body>
+</html>
